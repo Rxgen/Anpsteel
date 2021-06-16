@@ -47,7 +47,19 @@
     <link rel="stylesheet" type="text/css"  href="assets/css/color4.css"  media="screen" id="color">
 
 </head>
+<style>
+    ul li {
+list-style: none;
+}
+#free li i {
+font-size:25px;
+margin:10px 10px;
+
+}
+</style>
 <body>
+
+   
 
 <!-- loader start -->
 <div class="loader-wrapper">
@@ -130,34 +142,51 @@
 
 <!---------Start of Contact US Page -->
 
-<div class="container" style="margin-top:30px;">
-    <h2 class="text-center text-uppercase display-5"> CONTACT US PAGE </h2>
+<div class="container-fluid jumbotron" >
+    <h2 class="text-uppercase display-5 ml-5"> CONTACT US  </h2>
 <div class="row" style="margin: 30px 0px;">
-                    <div class="col-lg-6">
-                        <a href="#"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.308605192371!2d73.24051151490484!3d19.31241048695273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDE4JzQ0LjciTiA3M8KwMTQnMzMuNyJF!5e0!3m2!1sen!2sin!4v1621745568438!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></a>
+                    <div class="col-sm-4">
+                        <a href="#"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.308605192371!2d73.24051151490484!3d19.31241048695273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDE4JzQ0LjciTiA3M8KwMTQnMzMuNyJF!5e0!3m2!1sen!2sin!4v1621745568438!5m2!1sen!2sin" width="450px" height="400px;"  class="p-3" style="border:0;" allowfullscreen="" loading="lazy"></iframe></a>
                         </div>
-                </div>
-                <div class="col-lg-6">
-
-                   <form class="form-group" method="post" action="trial.php">
+                
+                <div class="col-sm-4">
+                 <form  method="post" action="trial.php">
                     <div class="form-group">
                         <label class="control-label" style="font-weight:bold;" for="name"> Name</label>
-                        <input id="name" name="name" type="text" placeholder="Enter your  Name" class="form-control input-md" required="">
+                        <input id="name" name="name" type="text" placeholder="Enter your  Name"  style="border:solid 1px black"class="form-control input-md" required="">
                     </div>
             <div class="form-group">
                 <label class="control-label" style="font-weight:bold;" for="name"> Mobile </label>
-                <input id="name" name="Phone" type="number" placeholder="Enter your Mobile Number" class="form-control input-md" required="">
+                <input id="name" name="Phone" type="text" placeholder="Enter your Mobile Number" style="border:solid 1px black" class="form-control input-md" required="">
             </div>
         <div class="form-group">
             <label class="control-label" style="font-weight:bold;" for="name">Email</label>
-            <input id="name" name="email" type="email" placeholder="Enter your Email " class="form-control input-md" required="">
+            <input id="name" name="email" type="email" placeholder="Enter your Email " class="form-control input-md"style="border:solid 1px black" required="">
         </div>
-               
+
+     <div class="form-group">
+            <label for="name" class="control-label"> Your Message </label>
+        <textarea type="text" name="name" class="form-control" placeholder=" Type your Message "style="border:solid 1px black; height:150px;" ></textarea> </textarea>
+        </div>
+
+        
                                 <div>
-                                    <button  type="submit" name="submit"class="btn btn-large btn-primary"> Send </button>  
+                                    <button  type="submit" name="submit"class="btn btn-large btn-success"> Send </button>  
                                         </div> 
                    </form>                
                          </div> 
+
+                         <div class="col-sm-4">
+                             <h3 class="text-center"> INFORMATION</h3>
+                            <div>
+                                <ul id="free">
+                                    <li><i class="fa fa-map-marker" aria-hidden="true"></i>S.R No-17/06, VILLAGE- RUNDA, TALUKA-KALYAN, DISTRICT-THANE, MAHARASHTRA- 421605 </li>
+                                <li><i class="fa fa-phone" aria-hidden="true"></i>Call Us: (+91) 9619041229 </li>
+                                <li><i class="fa fa-envelope-o" aria-hidden="true"></i>Email Us: sales@anpsteel.com</li>
+                                    
+                                </ul>
+                            </div>
+                         </div>
                 </div>
 
 

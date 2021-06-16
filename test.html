@@ -1,0 +1,132 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+<title>Scan Infotech</title>
+</head>
+<body>
+
+<div class="container mx-auto mt-5">
+    <h1 class="text-center"> Jquery Validation form </h1>
+<form class="border border-dark p-4">  
+    <div class="form-row">
+        <div class="col-md-6 form-group">
+            <label for ="name"> Name </label>
+            <input type="text" name="Name" id="name" class="form-control required">
+            <span id="errname"> Please fill the details </span>
+        </div>
+        <div class="col-md-6 form-group">
+            <label for ="name"> Full Name  </label>
+            <input type="text" name="Name" id="fname" class="form-control required">
+            <span id="errname"> Please fill the details </span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" Placehoder="Type your Email" id="email" class="form-control required">
+        <span id="errname"> Please fill the details </span>
+    </div>
+
+    <div class="form-row">
+        <div class="col-md-6 form-group">
+            <label for="pass"> Password </label>
+            <input type="password" name="pass" id="pass"  class="form-control required" Placeholder="Enter your Password">
+            <span id="errname"> Please fill the details </span>
+
+        </div>
+        <div class="col-md-6 form-group">
+            <label for="pass"> Mobile Number </label>
+            <input type="text" name="pass" id="pass"  class="form-control required"Placeholder="Enter your Mobile Number">
+            <span id="errname"> Please fill the details </span>
+        </div>   
+    </div>
+
+    <div class="form-row">
+        <div class=" col-md-6 form-group">
+            <label for="Country"> Country </label>
+            <select class="form-control" id="country">
+                <option value="India"> India </option>
+                <option value ="Japan"> Japan </option>
+                <option value="Mexico"> Mexico </option>
+            </select>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="course"> Course </label>
+            <input type="text" name="course" class="form-control required" id="course">
+            <span id="errname"> Please fill the details </span>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3"> Submit </button>
+</form>
+</div>
+
+
+<!---Dynamic Table -->
+
+<div class="container mt-5">
+    <h1 class="text-center"> Dynamic Table </h1>
+    <div class="row">
+        <div class="col-md-12 mx-auto mt-3">
+<table class=" table table-bordered table-responsive table-hover">
+    <thead>
+        <tr>
+        <th> ID </th>
+        <th> Name </th>
+        <th> Surname </th>
+        <th> Course </th>
+        <th> <input type="button" class="btn btn-success px-3 " value="Add new Row" id="addbtn"> </th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        
+    </tbody>
+</table>
+       </div>
+    </div>
+</div>
+
+
+<script>
+$(document).ready(function(){
+    $("span").hide();
+$("#addbtn").click(function() {
+    var html="<tr>"  
+        html+="<td> <input type='text' name='empname' class='form-control' placeholder='Enter Your ID'> </td>" 
+        html+="<td> <input type='text' name='fname'  class='form-control' placeholder='Enter Your Name'> </td>" 
+        html+="<td> <input type='text' name='lname'  class='form-control' placeholder='Enter Your Surname'> </td>" 
+        html+="<td> <input type='text' name='lname'  class='form-control' placeholder='Enter Your Course'> </td>" 
+        html+="<td> <input type='button' class='btn btn-danger' value='Remove' id='deletebtn'> </td>"
+        html+="</tr>";
+    $("tbody").append(html);
+
+   
+});
+$('table tbody' ).on('click','.deletebtn',function (){
+        $('this').closest('tr').remove();
+    })
+    
+$("#name").keyup(function(){
+    $("#errname").hide();
+    $("#errname").css("color","red");
+})
+
+
+});
+
+
+    </script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
